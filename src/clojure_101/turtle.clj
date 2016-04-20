@@ -69,6 +69,22 @@
 (draw-circle 40 50)
 
 
+(color [255 0 0 30])
+
+(defn draw-triangle
+  "Draws a right-angled triangle"
+  [unit-length]
+  (let [long-side (Math/sqrt (* 2(* unit-length unit-length)))]
+    (start-fill)
+    (forward unit-length)
+    (right 90)
+    (forward unit-length)
+    (right 135)
+    (forward long-side)
+    (end-fill)))
+
+(draw-triangle 80)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Challenges
 
